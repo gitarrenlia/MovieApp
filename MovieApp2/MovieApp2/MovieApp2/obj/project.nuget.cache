@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "7O5JkI9wrc4wBISPA8D069CB7zZKzjNnYH9kc8b8rR9/ykaOqgGJTPGdJInholRyT2XAh3nuSsbmjBtFTuEJ3w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lila7\\source\\repos\\MovieApp2\\MovieApp2\\MovieApp2\\MovieApp2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lila7\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\lila7\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\lila7\\.nuget\\packages\\syncfusion.licensing\\18.1.0.57\\syncfusion.licensing.18.1.0.57.nupkg.sha512",
+    "C:\\Users\\lila7\\.nuget\\packages\\syncfusion.xamarin.core\\18.1.0.57\\syncfusion.xamarin.core.18.1.0.57.nupkg.sha512",
+    "C:\\Users\\lila7\\.nuget\\packages\\syncfusion.xamarin.sfrating\\18.1.0.57\\syncfusion.xamarin.sfrating.18.1.0.57.nupkg.sha512",
+    "C:\\Users\\lila7\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.3.1\\xamarin.essentials.1.3.1.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.5.0.495\\xamarin.forms.4.5.0.495.nupkg.sha512"
+  ],
+  "logs": []
+}

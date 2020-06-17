@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MovieApp2.MainPage"
+             Title=" Best Movies ">
+    <StackLayout BackgroundColor="#00081A" Padding="10,10">
+        <!-- Place new controls here -->
+        <ListView x:Name="MovieXamlList" ItemsSource="{Binding Movies}" RowHeight="200" WidthRequest="400" IsPullToRefreshEnabled="True" ItemTapped="List_view_item_tapped">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Image Source="{Binding Image}" Aspect="AspectFill"/>
+                        <StackLayout Grid.Column="1">
+                            <Label Text="{Binding Title}" FontAttributes="Bold" TextColor="LightGray"/>
+                            <Label Text="{Binding Year}" TextColor="LightGray"/>
+                            <Label Text="{Binding Crew}" TextColor="LightGray"/>
+                            <Label Text="{Binding IMDbRating}" TextColor="LightGray"/>
+                        </StackLayout>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    </StackLayout>
+</ContentPage>
