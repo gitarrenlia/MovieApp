@@ -17,7 +17,7 @@
                 <ColumnDefinition Width="Auto" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Image x:Name="image" HeightRequest="100" WidthRequest="80" Grid.Row="0"/>
+            <Image x:Name="image" HeightRequest="150" WidthRequest="100" Grid.Row="0"/>
             <StackLayout Grid.Column="1" Grid.Row="0">
                 <Label x:Name="lblTitle" FontAttributes="Bold" TextColor="LightGray" FontSize="20"/>
                 <Label x:Name="lblYear"  TextColor="LightGray"/>

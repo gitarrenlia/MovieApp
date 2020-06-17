@@ -20,7 +20,7 @@
                             <ColumnDefinition Width="Auto" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
-                        <Image Source="{Binding Image}" Aspect="AspectFill"/>
+                        <Image Source="{Binding Image}" Aspect="AspectFill" WidthRequest="120"/>
                         <StackLayout Grid.Column="1">
                             <Label Text="{Binding Title}" FontAttributes="Bold" TextColor="LightGray"/>
                             <Label Text="{Binding Year}" TextColor="LightGray"/>

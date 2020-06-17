@@ -29,10 +29,18 @@ namespace MovieApp2
 
         private void getDataFromServer()
         {
+            HttpResponse<Top250Data> request = null;
+            try
+            {
+                request = Unirest.get("https://imdb-api.com/en/API/Top250Movies/k_kosg24pB")
+                    .header("X-RapidAPI-Key", "k_kosg24pB")
+                    .asJson<Top250Data>();
+            }catch(Exception e)
+            {
+                DisplayAlert("Alert","Cannot connect to the network to get new data :'( ","ok") ;
+                return;
+            }
             Movies = new List<Top250DataDetail>();
-            HttpResponse<Top250Data> request = Unirest.get("https://imdb-api.com/en/API/Top250Movies/k_kosg24pB")
-            .header("X-RapidAPI-Key", "k_kosg24pB")
-            .asJson<Top250Data>();
             for (int i = 0; i < 250; i++)
             {
                 Top250DataDetail movie = request.Body.Items[i];
@@ -49,9 +57,9 @@ namespace MovieApp2
         private string getRating(Top250DataDetail content)
         {
             int emoji = 0x1F3AC;
-            Console.WriteLine(content.IMDbRating);
-            var sb = new StringBuilder(Convert.ToInt32(Double.Parse(content.IMDbRating)));
-            for (int i = 0; i < Convert.ToInt32(Double.Parse(content.IMDbRating)); i++)
+            int roundrating = Convert.ToInt32(Double.Parse(content.IMDbRating.Replace(".", ",")));
+            var sb = new StringBuilder(roundrating);
+            for (int i = 0; i < roundrating; i++)
             {
                 sb.Append(Char.ConvertFromUtf32(emoji) + " ");
             }
