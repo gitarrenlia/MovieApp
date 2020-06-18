@@ -24,6 +24,7 @@ namespace MovieApp2
             MovieXamlList.RefreshCommand = new Command(() => {
                 getDataFromServer();
                 MovieXamlList.IsRefreshing = false;
+                MovieXamlList.ItemsSource = Movies;
             });
         }
 
@@ -57,7 +58,8 @@ namespace MovieApp2
         private string getRating(Top250DataDetail content)
         {
             int emoji = 0x1F3AC;
-            int roundrating = Convert.ToInt32(Double.Parse(content.IMDbRating.Replace(".", ",")));
+            //round the rating number to integer in all culture settings
+            int roundrating = Convert.ToInt32(Double.Parse(content.IMDbRating, System.Globalization.NumberStyles.AllowDecimalPoint, System.Globalization.NumberFormatInfo.InvariantInfo));
             var sb = new StringBuilder(roundrating);
             for (int i = 0; i < roundrating; i++)
             {
